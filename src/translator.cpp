@@ -13,6 +13,8 @@ int main()
 {
 
     string tmp;
+    string w1;
+    string w2;
 
     while (true)
     {
@@ -25,11 +27,14 @@ int main()
         }
         if (tmp.compare("add") == 0)
         {
-            string w1;
-            string w2;
             cin >> w1;
             cin >> w2;
             cout << w1 + " => " + w2 << endl;
+        }
+        else if (tmp.compare("translate") == 0)
+        {
+            getline(std::cin, tmp);
+            cout << tmp << endl;
         }
     }
 
