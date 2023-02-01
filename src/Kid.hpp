@@ -2,6 +2,7 @@
 
 #include <string>
 #include <ostream>
+#include "PlushStore.hpp"
 
 class Kid
 {
@@ -20,6 +21,12 @@ public:
     int get_money() const
     {
         return _money;
+    }
+
+    void buy_plush(PlushStore &plushStore)
+    {
+        auto plush = plushStore.buy(_money);
+        _money -= plush->get_cost();
     }
 
 private:

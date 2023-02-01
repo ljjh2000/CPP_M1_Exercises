@@ -88,6 +88,7 @@ public:
             auto p = *plush;
             (_stock.erase(plush));
             _wealth_amount += p.get_cost();
+            std::cout << get_stock_size() << std::endl;
 
             return p;
         }
