@@ -22,6 +22,11 @@ public:
         return *_pokemon;
     }
 
+    PokemonPtr extaxt()
+    {
+        return std::move(_pokemon);
+    }
+
 private:
     PokemonPtr _pokemon;
 };

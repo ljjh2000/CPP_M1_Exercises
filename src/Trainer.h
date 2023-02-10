@@ -40,6 +40,11 @@ public:
         _pc.transfer(std::move(pokemon));
     }
 
+    void store_in_pc(int index)
+    {
+        _pc.transfer(std::move(_pokeballs[index].extaxt()));
+    }
+
 private:
     std::string _name;
     PC &_pc;
