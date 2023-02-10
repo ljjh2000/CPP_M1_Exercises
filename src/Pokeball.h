@@ -17,7 +17,7 @@ public:
         _pokemon = std::move(pokemon);
     }
 
-    const Pokemon &pokemon()
+    const Pokemon &pokemon() const
     {
         return *_pokemon;
     }
