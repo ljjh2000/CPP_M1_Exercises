@@ -6,6 +6,8 @@
 
 static int ID = 0;
 
+class Trainer;
+
 // A creature that is cute and can fight other ones.
 class Pokemon
 {
@@ -36,7 +38,17 @@ public:
         return _id;
     }
 
-    Pokemon operator=(const Pokemon &pokemon)
+    const Trainer *trainer() const
+    {
+        return _trainer;
+    }
+
+    void set_trainer(const Trainer &trainer)
+    {
+        _trainer = &trainer;
+    }
+
+    Pokemon operator=(const Pokemon pokemon)
     {
         return Pokemon{pokemon};
     }
@@ -44,6 +56,7 @@ public:
 private:
     const std::string _name;
     int _id;
+    const Trainer *_trainer = nullptr;
 };
 
 using PokemonPtr = std::unique_ptr<Pokemon>;
