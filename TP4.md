@@ -92,8 +92,12 @@ Bon courage à vous ! Si vous êtes bloqués, n'hésitez pas à utiliser les ind
 > **Pokemons can be constructed with their name**\
 > Quelle classe pourriez-vous utiliser pour stocker le nom d'un Pokémon ?
 
+Pokeball
+
 > **Querying the name of a Pokemon does not modify the Pokemon**\
 > Comment faut-il faire pour indiquer qu'une fonction-membre ne va pas modifier les attributs de l'instance sur laquelle elle est appelée ?
+
+const
 
 > **Whenever a Pokemon is constructed, it is assigned an identifier that gets incremented each time**\
 > Vous pouvez utiliser un attribut static pour stocker le prochain identifiant à utiliser.
