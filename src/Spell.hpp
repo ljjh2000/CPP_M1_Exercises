@@ -43,11 +43,7 @@ public:
         : Card{id, CardType::Spell}, _spellType{spellType}
     {
         Card::set_name(name);
-    }
-
-    const SpellType &get_spell_type() const
-    {
-        return _spellType;
+        _symbol = u8"魔";
     }
 
 private:

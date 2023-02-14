@@ -55,6 +55,7 @@ public:
           _def{def}
     {
         Card::set_name(name);
+        _symbol = to_symbol(_attribute);
     }
 
     const Attribute &get_attribute() const

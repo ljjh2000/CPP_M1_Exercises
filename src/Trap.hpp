@@ -36,6 +36,7 @@ public:
           _trapType{trapType}
     {
         Card::set_name(name);
+        _symbol = u8"罠";
     }
 
     const TrapType &get_trap_type() const

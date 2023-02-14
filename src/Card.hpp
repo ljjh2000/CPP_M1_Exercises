@@ -66,9 +66,17 @@ public:
         return _description;
     }
 
+    const std::string &get_symbol() const
+    {
+        return _symbol;
+    }
+
 private:
     std::string _id;
     CardType _cardType;
     std::string _name;
     std::string _description;
+
+protected:
+    std::string _symbol;
 };
