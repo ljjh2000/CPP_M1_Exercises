@@ -72,6 +72,11 @@ public:
         return _def;
     }
 
+    void set_description(const std::string &description)
+    {
+        Card::set_description(description);
+    }
+
 private:
     Attribute _attribute;
     std::string _type;
