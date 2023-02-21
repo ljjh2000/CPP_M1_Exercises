@@ -3,6 +3,7 @@
 #include "Node.hpp"
 #include "NodeKind.hpp"
 
+#include <memory>
 #include <string>
 #include <vector>
 
@@ -18,4 +19,6 @@ public:
     ~ObjectNode() = default;
 
     std::string print() const override { return "{}"; }
+
+    static std::unique_ptr<ObjectNode> make_ptr() { return std::make_unique<ObjectNode>(); }
 };

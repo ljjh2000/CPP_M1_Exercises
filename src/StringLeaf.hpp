@@ -3,6 +3,7 @@
 #include "Leaf.hpp"
 #include "NodeKind.hpp"
 
+#include <memory>
 #include <string>
 
 class StringLeaf : public Leaf
@@ -21,4 +22,9 @@ public:
     std::string data() const { return _chaine; }
 
     ~StringLeaf() = default;
+
+    static std::unique_ptr<StringLeaf> make_ptr(const std::string& chaine)
+    {
+        return std::make_unique<StringLeaf>(chaine);
+    }
 };

@@ -3,6 +3,7 @@
 #include "Node.hpp"
 #include "NodeKind.hpp"
 
+#include <memory>
 #include <string>
 #include <vector>
 
@@ -18,4 +19,6 @@ public:
     ~ArrayNode() = default;
 
     std::string print() const override { return "[]"; }
+
+    static std::unique_ptr<ArrayNode> make_ptr() { return std::make_unique<ArrayNode>(); }
 };
