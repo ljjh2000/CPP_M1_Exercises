@@ -5,8 +5,10 @@
 class Leaf : public Node
 {
 protected:
-    Leaf();
+    Leaf(NodeKind nodeKind)
+        : Node { nodeKind }
+    {}
 
 public:
-    virtual ~Leaf();
+    virtual ~Leaf() = default;
 };
