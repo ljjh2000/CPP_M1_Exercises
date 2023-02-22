@@ -10,7 +10,7 @@
 class ArrayNode : public Node
 {
 private:
-    std::vector<Node> _nodes;
+    std::vector<NodePtr> _arrayNodes;
 
 public:
     ArrayNode()
@@ -19,6 +19,10 @@ public:
     ~ArrayNode() = default;
 
     std::string print() const override { return "[]"; }
+
+    void push_back(NodePtr arrayNode) { _arrayNodes.emplace_back(std::move(arrayNode)); }
+
+    int child_count() const { return InstanceCounter::counter(); }
 
     static std::unique_ptr<ArrayNode> make_ptr() { return std::make_unique<ArrayNode>(); }
 };
