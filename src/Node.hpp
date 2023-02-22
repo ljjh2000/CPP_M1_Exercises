@@ -25,5 +25,9 @@ public:
 
     virtual std::string print() const = 0;
 
+    virtual unsigned int height() const = 0;
+
+    virtual unsigned int node_count() const = 0;
+
     NodeKind kind() const { return _nodeKind; }
 };

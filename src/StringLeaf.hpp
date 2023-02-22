@@ -27,4 +27,8 @@ public:
     {
         return std::make_unique<StringLeaf>(chaine);
     }
+
+    unsigned int height() const override { return 0; }
+
+    unsigned int node_count() const override { return 1; }
 };

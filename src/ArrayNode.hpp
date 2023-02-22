@@ -38,4 +38,31 @@ public:
     size_t child_count() const { return _arrayNodes.size(); }
 
     static std::unique_ptr<ArrayNode> make_ptr() { return std::make_unique<ArrayNode>(); }
+
+    unsigned int height() const override
+    {
+        if (_arrayNodes.empty())
+        {
+            return 0;
+        }
+        unsigned int result = 0;
+        for (const auto& node : _arrayNodes)
+        {
+            if (node->height() > result)
+            {
+                result = node->height();
+            }
+        }
+        return result + 1;
+    }
+
+    unsigned int node_count() const override
+    {
+        unsigned int result = 0;
+        for (const auto& node : _arrayNodes)
+        {
+            result += node->node_count();
+        }
+        return result + 1;
+    }
 };

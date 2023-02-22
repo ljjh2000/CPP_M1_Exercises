@@ -41,4 +41,31 @@ public:
     void insert(const std::string& key, NodePtr value) { _objectNode.emplace(key, std::move(value)); }
 
     static std::unique_ptr<ObjectNode> make_ptr() { return std::make_unique<ObjectNode>(); }
+
+    unsigned int height() const override
+    {
+        if (_objectNode.empty())
+        {
+            return 0;
+        }
+        unsigned int result = 0;
+        for (const auto& node : _objectNode)
+        {
+            if (node.second->height() > result)
+            {
+                result = node.second->height();
+            }
+        }
+        return result + 1;
+    }
+
+    unsigned int node_count() const override
+    {
+        unsigned int result = 0;
+        for (const auto& node : _objectNode)
+        {
+            result += node.second->node_count();
+        }
+        return result + 1;
+    }
 };

@@ -23,4 +23,8 @@ public:
     int data() const { return _nb; }
 
     static std::unique_ptr<IntLeaf> make_ptr(int nb) { return std::make_unique<IntLeaf>(nb); }
+
+    unsigned int height() const override { return 0; }
+
+    unsigned int node_count() const override { return 1; }
 };
