@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Node.hpp"
+#include "NodeKind.hpp"
 
 class Leaf : public Node
 {
