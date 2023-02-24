@@ -6,6 +6,8 @@
 #include <memory>
 #include <string>
 
+class IntLeaf;
+
 class Node;
 
 using NodePtr = std::unique_ptr<Node>;
@@ -30,4 +32,6 @@ public:
     virtual unsigned int node_count() const = 0;
 
     NodeKind kind() const { return _nodeKind; }
+
+    IntLeaf* as_IntLeaf();
 };
