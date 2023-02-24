@@ -7,6 +7,7 @@
 #include <string>
 
 class IntLeaf;
+class StringLeaf;
 
 class Node;
 
@@ -34,4 +35,6 @@ public:
     NodeKind kind() const { return _nodeKind; }
 
     IntLeaf* as_IntLeaf();
+
+    StringLeaf* as_StringLeaf();
 };
