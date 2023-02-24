@@ -8,6 +8,7 @@
 
 class IntLeaf;
 class StringLeaf;
+class ArrayNode;
 
 class Node;
 
@@ -37,4 +38,6 @@ public:
     IntLeaf* as_IntLeaf();
 
     StringLeaf* as_StringLeaf();
+
+    ArrayNode* as_ArrayNode();
 };
