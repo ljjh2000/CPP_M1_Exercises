@@ -79,4 +79,21 @@ public:
     }
 
     Node* at(const std::string& key) const;
+
+    bool operator==(const Node& node) const override
+    {
+        auto value = node.as_ObjectNode();
+        if (value == nullptr)
+        {
+            return false;
+        }
+        if (value->print() == print())
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 };

@@ -73,4 +73,21 @@ public:
     std::vector<NodePtr>::const_iterator begin() const { return _arrayNodes.begin(); }
 
     std::vector<NodePtr>::const_iterator end() const { return _arrayNodes.end(); }
+
+    bool operator==(const Node& node) const override
+    {
+        auto value = node.as_ArrayNode();
+        if (value == nullptr)
+        {
+            return false;
+        }
+        if (value->print() == print())
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 };

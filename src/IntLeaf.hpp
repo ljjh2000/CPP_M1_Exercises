@@ -27,4 +27,21 @@ public:
     unsigned int height() const override { return 0; }
 
     unsigned int node_count() const override { return 1; }
+
+    bool operator==(const Node& node) const override
+    {
+        auto intLeaf = node.as_IntLeaf();
+        if (intLeaf == nullptr)
+        {
+            return false;
+        }
+        if (intLeaf->print() == print())
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 };

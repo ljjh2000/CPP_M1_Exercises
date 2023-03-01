@@ -31,4 +31,21 @@ public:
     unsigned int height() const override { return 0; }
 
     unsigned int node_count() const override { return 1; }
+
+    bool operator==(const Node& node) const override
+    {
+        auto value = node.as_StringLeaf();
+        if (value == nullptr)
+        {
+            return false;
+        }
+        if (value->print() == print())
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 };
