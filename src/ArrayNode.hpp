@@ -65,4 +65,8 @@ public:
         }
         return result + 1;
     }
+
+    std::vector<NodePtr>::iterator begin() { return _arrayNodes.begin(); }
+
+    std::vector<NodePtr>::iterator end() { return _arrayNodes.end(); }
 };
