@@ -2,6 +2,7 @@
 
 #include "ArrayNode.hpp"
 #include "IntLeaf.hpp"
+#include "ObjectNode.hpp"
 #include "StringLeaf.hpp"
 
 IntLeaf* Node::as_IntLeaf()
@@ -17,4 +18,9 @@ StringLeaf* Node::as_StringLeaf()
 ArrayNode* Node::as_ArrayNode()
 {
     return dynamic_cast<ArrayNode*>(this);
+}
+
+ObjectNode* Node::as_ObjectNode()
+{
+    return dynamic_cast<ObjectNode*>(this);
 }

@@ -68,4 +68,15 @@ public:
         }
         return result + 1;
     }
+
+    bool has_child(const std::string& key) const
+    {
+        if (auto search = _objectNode.find(key); search != _objectNode.end())
+        {
+            return true;
+        }
+        return false;
+    }
+
+    Node* at(const std::string& key) const;
 };

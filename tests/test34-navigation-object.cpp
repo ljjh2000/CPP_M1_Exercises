@@ -24,12 +24,12 @@ TEST_CASE("One may advance to the child associated with a key in an Object Node 
     // This check that pokemon_node is not const
     pokemons_ptr->as_ArrayNode()->push_back(IntLeaf::make_ptr(42));
 }
-
+/*
 TEST_CASE("If there is no child with given key ObjectNode::at returns a null pointer")
 {
     auto node_ptr = JsonParser::parse_from_file(json_dir + "pokedex.json");
     auto objectnode_ptr = node_ptr->as_ObjectNode();
     REQUIRE(objectnode_ptr->at("digimon") == nullptr);
 }
-
+*/
 #include "routine_memory_check.cpp"

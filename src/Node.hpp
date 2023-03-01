@@ -9,6 +9,7 @@
 class IntLeaf;
 class StringLeaf;
 class ArrayNode;
+class ObjectNode;
 
 class Node;
 
@@ -40,4 +41,6 @@ public:
     StringLeaf* as_StringLeaf();
 
     ArrayNode* as_ArrayNode();
+
+    ObjectNode* as_ObjectNode();
 };
