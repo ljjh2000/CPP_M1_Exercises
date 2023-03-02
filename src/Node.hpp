@@ -53,4 +53,6 @@ public:
     const ObjectNode* as_ObjectNode() const;
 
     virtual bool operator==(const Node& node) const = 0;
+
+    virtual NodePtr deep_copy() const = 0;
 };

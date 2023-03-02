@@ -44,4 +44,6 @@ public:
             return false;
         }
     }
+
+    NodePtr deep_copy() const override { return std::move(std::make_unique<IntLeaf>(_nb)); }
 };
